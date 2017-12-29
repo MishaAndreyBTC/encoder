@@ -10,19 +10,28 @@ namespace ConsoleApp2
     {
         static void Main(string[] args)
         {
+            Random rand = new Random();
             string text = Console.ReadLine();
-            char key = char.Parse(Console.ReadLine());
+            byte[] key = new byte[text.Length];
+            for(int i =0; i < text.Length; i++)
+            {
+                key[i] = Convert.ToByte( rand.Next(0, 100));
+                Console.Write(key[i]);
+            }
 
+            Console.WriteLine();
+            
             char[] shifr = new char[text.Length];
             byte[] scripted = new byte[shifr.Length];
             for (int i = 0; i < shifr.Length; i++)
             {
 
                 shifr[i] = text[i];
-                scripted[i] = Convert.ToByte(shifr[i] + key);
+                scripted[i] = Convert.ToByte(shifr[i] + key[i]);
+
                 Console.Write(scripted[i]);
             }
-
+            
 
         }
     }

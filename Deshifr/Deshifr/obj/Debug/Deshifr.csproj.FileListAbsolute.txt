@@ -1,0 +1,6 @@
+C:\Users\Mihail\source\repos\Deshifr\Deshifr\bin\Debug\Deshifr.exe.config
+C:\Users\Mihail\source\repos\Deshifr\Deshifr\bin\Debug\Deshifr.exe
+C:\Users\Mihail\source\repos\Deshifr\Deshifr\bin\Debug\Deshifr.pdb
+C:\Users\Mihail\source\repos\Deshifr\Deshifr\obj\Debug\Deshifr.csproj.CoreCompileInputs.cache
+C:\Users\Mihail\source\repos\Deshifr\Deshifr\obj\Debug\Deshifr.exe
+C:\Users\Mihail\source\repos\Deshifr\Deshifr\obj\Debug\Deshifr.pdb

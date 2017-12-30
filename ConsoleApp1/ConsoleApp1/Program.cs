@@ -11,28 +11,17 @@ namespace ConsoleApp2
         static void Main(string[] args)
         {
             Random rand = new Random();
-            string text = Console.ReadLine();
-            byte[] key = new byte[text.Length];
-            for(int i =0; i < text.Length; i++)
+            string input = Console.ReadLine();
+            byte[] byteinput = System.Text.Encoding.UTF8.GetBytes(input);
+            byte[] key = new byte[byteinput.Length];
+            byte[] output = new byte[input.Length];
+            for (int i = 0; i < key.Length; i++)
             {
-                key[i] = Convert.ToByte( rand.Next(0, 100));
-                Console.Write(key[i]);
+                key[i] = Convert.ToByte( rand.Next(1,100));
+                output[i] = Convert.ToByte(key[i] + byteinput[i]);
             }
-
-            Console.WriteLine();
-            
-            char[] shifr = new char[text.Length];
-            byte[] scripted = new byte[shifr.Length];
-            for (int i = 0; i < shifr.Length; i++)
-            {
-
-                shifr[i] = text[i];
-                scripted[i] = Convert.ToByte(shifr[i] + key[i]);
-
-                Console.Write(scripted[i]);
-            }
-            
-
+            System.IO.File.WriteAllBytes("key.txt", key);
+            System.IO.File.WriteAllBytes("scripted.txt", output);
         }
     }
 }

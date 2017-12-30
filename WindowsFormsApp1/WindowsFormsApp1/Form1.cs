@@ -17,14 +17,14 @@ namespace WindowsFormsApp1
 
         public string Encode1(string TxtIn, string Key)
         {
-            char[] arrtext = new char[TxtIn.Length];
-            char[] arrkey = new char[TxtIn.Length];
+            char[] arrtext = TxtIn.ToCharArray();
+            char[] arrkey = Key.ToCharArray();
             for (int i = 0; i < arrtext.Length; i++)
             {
                 Console.WriteLine(arrtext[i]);
             }
-
             string output = "testik";
+            return output;
             /*
              Самый простой конвертер на основе ASCII кодов.Каждому символу соотв.ascii код -функция преобразования Char To Byte. То есть символ можно перевести в число
              1.Сформировать таблицу для перекодирования
@@ -36,7 +36,6 @@ namespace WindowsFormsApp1
              4.Берем соответствующий элемент из таблицы перекодировки(65 элемент массива) и записываем его в выходную строчку
              5.так делаем с каждым символом из txtin
              */
-            return output;
         }
         //----------------------------------------------------------------------------------------------------------------------------------------------//
         public Form1()

@@ -15,7 +15,7 @@ namespace WindowsFormsApp1
         private string KeyToEncode;
         private string enc = "";
         string asci = "ABCDEFGHIJKLMNOPQRSTUVWXYZ АБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ.,abcdefghijklmnopqrstuvwxyz!@#$%^&*()_+|`1234567890-=/абвгдеёжзийклмнопрстуфхцчшщъыьэюя";
-
+       
         public string Decode1(string TxtIn, string Key)
         {
             string outtext = "";
@@ -26,6 +26,7 @@ namespace WindowsFormsApp1
             }
             return outtext;
         }
+        //-------------------------------------------------------------------------------------------------------------------------------------
         public string Encode1(string TxtIn, string Key)
         {
             string outtext = "";

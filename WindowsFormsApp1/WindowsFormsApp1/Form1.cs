@@ -18,9 +18,10 @@ namespace WindowsFormsApp1
         public string Decode1(string TxtIn, string Key)
         {
             string outtext = "";
-            for(int i=0; ;i++)
+            for(int i=0;i<TxtIn.Length ;i++)
             {
-
+                int x = enc.IndexOf(TxtIn[i]);
+                outtext += Convert.ToChar(x);
             }
             return outtext;
         }
@@ -30,15 +31,14 @@ namespace WindowsFormsApp1
             int j = 0,k = 0;
             for(j=0; j<Key.Length;j++)              //Заполнение массива
             {
-                if (enc.IndexOf(Key[j]) == -1)
+                if (enc.IndexOf(Key[j]) == -1)      //Проверка на повторы
                 {
                     enc += Key[j];
                 }
             }
-
-            while (k < asci.Length)
+            while (k < asci.Length)                 //Заполнение массива
             {
-                if (enc.IndexOf(asci[k]) == -1)
+                if (enc.IndexOf(asci[k]) == -1)     //Проверка на повторы
                 {
                     enc += asci[k];
                 }
@@ -49,7 +49,6 @@ namespace WindowsFormsApp1
             {
                int x = Convert.ToByte(TxtIn[i]);
                 outtext += enc[x];
-
             }
             richTextBox1.AppendText(" ");
             return outtext;
@@ -110,6 +109,16 @@ namespace WindowsFormsApp1
         }
 
         private void richTextBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            textBox4.Text = Decode1(textBox3.Text, textBox1.Text);
+        }
+
+        private void textBox4_TextChanged(object sender, EventArgs e)
         {
 
         }

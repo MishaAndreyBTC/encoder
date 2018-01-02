@@ -13,18 +13,46 @@ namespace WindowsFormsApp1
     public partial class Form1 : Form
     {
         private string KeyToEncode;
+        private string enc = "";
+        string asci = "ABCDEFGHIJKLMNOPQRSTUVWXYZ АБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ.,abcdefghijklmnopqrstuvwxyz!@#$%^&*()_+|`1234567890-=/абвгдеёжзийклмнопрстуфхцчшщъыьэюя";
+        public string Decode1(string TxtIn, string Key)
+        {
+            string outtext = "";
+            for(int i=0; ;i++)
+            {
 
-
+            }
+            return outtext;
+        }
         public string Encode1(string TxtIn, string Key)
         {
-            char[] arrtext = TxtIn.ToCharArray();
-            char[] arrkey = Key.ToCharArray();
-            for (int i = 0; i < arrtext.Length; i++)
+            string outtext = "";
+            int j = 0,k = 0;
+            for(j=0; j<Key.Length;j++)              //Заполнение массива
             {
-                Console.WriteLine(arrtext[i]);
+                if (enc.IndexOf(Key[j]) == -1)
+                {
+                    enc += Key[j];
+                }
             }
-            string output = "testik";
-            return output;
+
+            while (k < asci.Length)
+            {
+                if (enc.IndexOf(asci[k]) == -1)
+                {
+                    enc += asci[k];
+                }
+                k++;
+            }
+            richTextBox1.AppendText(enc);
+            for(int i=0;i<TxtIn.Length; i++)
+            {
+               int x = Convert.ToByte(TxtIn[i]);
+                outtext += enc[x];
+
+            }
+            richTextBox1.AppendText(" ");
+            return outtext;
             /*
              Самый простой конвертер на основе ASCII кодов.Каждому символу соотв.ascii код -функция преобразования Char To Byte. То есть символ можно перевести в число
              1.Сформировать таблицу для перекодирования
@@ -62,6 +90,26 @@ namespace WindowsFormsApp1
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox3_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void richTextBox1_TextChanged(object sender, EventArgs e)
         {
 
         }

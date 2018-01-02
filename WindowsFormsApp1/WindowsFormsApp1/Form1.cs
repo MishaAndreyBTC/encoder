@@ -15,13 +15,14 @@ namespace WindowsFormsApp1
         private string KeyToEncode;
         private string enc = "";
         string asci = "ABCDEFGHIJKLMNOPQRSTUVWXYZ АБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ.,abcdefghijklmnopqrstuvwxyz!@#$%^&*()_+|`1234567890-=/абвгдеёжзийклмнопрстуфхцчшщъыьэюя";
+
         public string Decode1(string TxtIn, string Key)
         {
             string outtext = "";
             for(int i=0;i<TxtIn.Length ;i++)
             {
                 int x = enc.IndexOf(TxtIn[i]);
-                outtext += Convert.ToChar(x);
+                outtext += asci[x];
             }
             return outtext;
         }
@@ -47,7 +48,7 @@ namespace WindowsFormsApp1
             richTextBox1.AppendText(enc);
             for(int i=0;i<TxtIn.Length; i++)
             {
-               int x = Convert.ToByte(TxtIn[i]);
+               int x = asci.IndexOf(TxtIn[i]);    //System.Text.Encoding.Unicode.GetBytes(input)
                 outtext += enc[x];
             }
             richTextBox1.AppendText(" ");

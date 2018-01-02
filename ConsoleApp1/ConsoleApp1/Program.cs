@@ -12,13 +12,15 @@ namespace ConsoleApp2
         {
             Random rand = new Random();
             string input = Console.ReadLine();
-            byte[] byteinput = System.Text.Encoding.UTF8.GetBytes(input);
+            byte[] byteinput = System.Text.Encoding.Unicode.GetBytes(input);
             byte[] key = new byte[byteinput.Length];
-            byte[] output = new byte[input.Length];
+            byte[] output = new byte[byteinput.Length];
             for (int i = 0; i < key.Length; i++)
             {
                 key[i] = Convert.ToByte( rand.Next(1,100));
-                output[i] = Convert.ToByte(key[i] + byteinput[i]);
+                int sum = key[i] + byteinput[i];
+                if (sum >= 256) { sum -= 256; }
+                output[i] = Convert.ToByte(sum);
             }
             System.IO.File.WriteAllBytes("key.txt", key);
             System.IO.File.WriteAllBytes("scripted.txt", output);

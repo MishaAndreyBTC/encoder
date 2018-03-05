@@ -45,7 +45,7 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(100, 11);
+            this.textBox1.Location = new System.Drawing.Point(100, 71);
             this.textBox1.Margin = new System.Windows.Forms.Padding(2);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(372, 20);
@@ -54,7 +54,7 @@
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(100, 52);
+            this.textBox2.Location = new System.Drawing.Point(100, 112);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(682, 20);
             this.textBox2.TabIndex = 1;
@@ -71,7 +71,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(23, 14);
+            this.label1.Location = new System.Drawing.Point(23, 74);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(33, 13);
             this.label1.TabIndex = 3;
@@ -80,7 +80,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(23, 55);
+            this.label2.Location = new System.Drawing.Point(23, 115);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(48, 13);
             this.label2.TabIndex = 4;
@@ -97,7 +97,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(100, 112);
+            this.button1.Location = new System.Drawing.Point(100, 155);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(148, 23);
             this.button1.TabIndex = 6;
@@ -155,7 +155,7 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label6.ForeColor = System.Drawing.Color.OrangeRed;
-            this.label6.Location = new System.Drawing.Point(501, 9);
+            this.label6.Location = new System.Drawing.Point(366, 9);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(227, 37);
             this.label6.TabIndex = 12;
